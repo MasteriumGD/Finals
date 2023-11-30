@@ -1,0 +1,101 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-size:20px;}
+
+
+body {font-family: Arial, Helvetica, Sans-serif; }
+header {height:60px;
+    background-color: #3e1375;
+    padding: 10px;
+    border-bottom: 5px solid #757575;}
+
+#admin{background-color: rgb(12, 241, 69);}
+
+a {color:white; text-decoration: none;}
+h1 {font-size:20px;
+    font-weight: normal;
+    padding: 0.3em;
+    color: white;
+    text-shadow: 1px 1px 0px #444;
+}
+.headerRight{float: right;}
+.headerLeft{float: left;}
+
+.form {
+    display:flex;
+    width:100%
+}
+.formLeft, .formRight, .formCenter form {
+    padding: 20px;
+    border-radius:20px;
+    border-color:gray;
+    justify-content:center;
+    background-color: #50505058;
+    margin-bottom:auto;
+}
+.formLeft {
+    width:350px;
+    justify-content: left;
+}
+.formRight {
+    width:350px;
+    justify-content: right;
+    text-align: center;
+}
+.formCenter {
+    padding:0px;
+    display:flex;
+    flex-direction: column;
+    width:600px;
+    margin:0 auto auto auto;
+}
+.dropDown {
+    text-align: center;
+}
+.postDetails {
+    margin-bottom:20px;
+}
+textarea, input[type=text], input[type=submit], input[type=file] {
+    margin-bottom:20px;
+    border-radius:20px;
+    border-width:5px;
+    height:40px;
+    width:100%;
+    padding:5px;
+}
+input[type=text] {margin-top:20px;}
+textarea {
+    height:120px;
+    resize:none;
+    vertical-align: middle;
+}
+.formCenter textarea, input[type=file] {
+    margin:0px; 
+    height:43px;
+    width:49%
+}
+input[type=submit] {
+    margin-bottom:20px;
+    background-color:#0051ff98;
+    color:white;
+    border-width:0;
+    border-radius:20px;
+    height:40px;
+    width:60px;
+    cursor: pointer;
+}
+
+main {
+    justify-content:center;
+    overflow: auto;
+    min-height: 60vh;
+    background-color: #f7f7f7;
+    width:100%;
+    padding: 10px;
+    box-shadow: -1000px 0 0 #f7f7f7, 1000px 0 0 #f7f7f7;
+    padding-top: 20px;
+}
+
+footer {
+    padding: 1em;
+    background-color: #FFC9A7;
+    font-size: 0.8em;
+    }
