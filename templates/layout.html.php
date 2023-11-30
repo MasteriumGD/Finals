@@ -24,21 +24,21 @@
 
                 <div class="formCenter">
                     <div class="dropDown">
-                        <form action="/category.php">
+                        <form action="" method="post">
                             <label for="cars">Specify which class to look at:</label>
-                            <select id="classes" name="classes">
-                                <option value="1770">1770</option>
-                                <option value="1773">1773</option>
-                                <option value="1840">1840</option>
+                            <select id="classes" name="classes" onchange="selectedClass()">
+                                <option value="1">1770</option>
+                                <option value="2">1773</option>
+                                <option value="3">1840</option>
                             </select>
                         </form> <br>
                     </div>
 
+                    <?php include 'post.php'?>
                     <div class="formPost">
                         <form action="/comment.php">
                             <div class="postDetails">
-                                <?php include 'includes/DatabaseConnection.php';
-                                include 'templates/posts.html.php' ?>
+                                <?=$output?>
                             </div>
                         </form>
                     </div>

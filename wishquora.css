@@ -9,7 +9,13 @@ header {height:60px;
 
 #admin{background-color: rgb(12, 241, 69);}
 
-a {color:white; text-decoration: none;}
+p{
+    display:inline;
+}
+a {
+    color:white;
+    text-decoration: none;
+}
 h1 {font-size:20px;
     font-weight: normal;
     padding: 0.3em;
@@ -23,7 +29,7 @@ h1 {font-size:20px;
     display:flex;
     width:100%
 }
-.formLeft, .formRight, .formCenter form {
+.formLeft, .formRight, blockquote {
     padding: 20px;
     border-radius:20px;
     border-color:gray;
@@ -67,7 +73,7 @@ textarea {
     resize:none;
     vertical-align: middle;
 }
-.formCenter textarea, input[type=file] {
+.formCenter textarea, .formCenter input[type=file] {
     margin:0px; 
     height:43px;
     width:49%

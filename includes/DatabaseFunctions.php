@@ -22,10 +22,11 @@ function totalJokes($pdo) {
 }
 
 function allPosts($pdo) {
-	$posts = query($pdo, 'SELECT post.id, categoryid, `name`, email, categoryName FROM joke
-	INNER JOIN author ON authorid  = author.id
-	INNER JOIN category ON categoryid = category.id');
-	return $jokes->fetchAll();
+	$posts = query($pdo, 'SELECT post.id, `category`, `username`, title, content, `filename` FROM post
+	INNER JOIN user ON userid  = user.id
+	INNER JOIN category ON categoryid = category.id
+    INNER JOIN post_image ON imageid = post_image.id');
+	return $posts->fetchAll();
 }
 
 function insertJoke($pdo, $joketext, $authorid, $categoryid) {

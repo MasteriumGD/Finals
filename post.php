@@ -3,7 +3,7 @@ try{
     include 'includes/DatabaseConnection.php';
     include 'includes/DataBaseFunctions.php';
 
-    //$posts = allPosts($pdo);
+    $posts = allPosts($pdo);
     $title = 'Student Forums';
     //$totalPosts = totalPosts($pdo);
 
