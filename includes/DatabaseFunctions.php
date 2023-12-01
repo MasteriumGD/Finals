@@ -15,21 +15,15 @@ function getJoke($pdo, $id) {
 	return $query->fetch();
 }
 
-function totalJokes($pdo) {
-	$query = query($pdo, 'SELECT COUNT(*) FROM joke');
-	$row = $query->fetch();
-	return $row[0];
-}
-
 function allPosts($pdo) {
-	$posts = query($pdo, 'SELECT post.id, `category`, `username`, title, content, `filename` FROM post
+	$posts = query($pdo, 'SELECT post.id, categoryid, `category`, `username`, title, content, `filename` FROM post
 	INNER JOIN user ON userid  = user.id
 	INNER JOIN category ON categoryid = category.id
     INNER JOIN post_image ON imageid = post_image.id');
 	return $posts->fetchAll();
 }
 
-function insertJoke($pdo, $joketext, $authorid, $categoryid) {
+function insertPost($pdo, $title, $content, $userid, $categoryid) {
 	$query = 'INSERT INTO joke (joketext, jokedate, authorid, categoryid)
 	VALUES (:joketext, CURDATE(), :authorid, :categoryid)';
 	$parameters = [':joketext' => $joketext, ':authorid' => $authorid, ':categoryid' => $categoryid];
