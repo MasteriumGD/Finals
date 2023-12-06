@@ -22,7 +22,9 @@ if(isset($_POST["login"]) and !empty($_POST['email']) and !empty($_POST['passwor
     $repeater = 0;
 }
 if($repeater==1){
-    include 'index.php';
+    $id = $user['id'];
+    $username = $user['username'];
+    header('location: index.php?id='.$id);
 }else{
     $title = "Log In";
     ob_start();

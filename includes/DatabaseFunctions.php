@@ -9,21 +9,20 @@ if(!function_exists('insertUser')){
 
 if(!function_exists('allPosts')){
 	function allPosts($pdo) {
-		$posts = query($pdo, 'SELECT post.id, categoryid, `category`, `username`, title, content, `filename` FROM post
+		$posts = query($pdo, 'SELECT post.id, categoryid, `category`, `username`, title, content, imagename FROM post
 		INNER JOIN user ON userid  = user.id
-		INNER JOIN category ON categoryid = category.id
-		INNER JOIN post_image ON imageid = post_image.id');
+		INNER JOIN category ON categoryid = category.id');
 		return $posts->fetchAll();
-}
+	}
 }
 
 if(!function_exists('insertPost')){
-function insertPost($pdo, $title, $content, $userid, $categoryid) {
-	$query = 'INSERT INTO joke (joketext, jokedate, authorid, categoryid)
-	VALUES (:joketext, CURDATE(), :authorid, :categoryid)';
-	$parameters = [':joketext' => $joketext, ':authorid' => $authorid, ':categoryid' => $categoryid];
+function insertPost($pdo, $title, $content, $userid, $categoryid, $imagename) {
+	$query = 'INSERT INTO post (title, content, userid, categoryid, imagename)
+	VALUES (:title, :content, :userid, :categoryid, :imagename)';
+	$parameters = [':title' => $title, ':content' => $content, ':userid' => $userid, ':categoryid' => $categoryid, ':imagename' => $imagename];
 	query($pdo, $query, $parameters);
-}
+	}
 }
 
 if(!function_exists('updateJoke')){
@@ -31,7 +30,7 @@ if(!function_exists('updateJoke')){
 		$query = 'UPDATE joke SET joketext = :joketext WHERE id = :id';
 		$parameters = [':joketext' => $joketext, ':id' => $jokeId];
 		query($pdo, $query, $parameters);
-}
+	}
 }
 
 if(!function_exists('insertUser')){
@@ -40,5 +39,5 @@ if(!function_exists('insertUser')){
 		VALUES (:username, :email, :password)';
 		$parameters = [':username' => $user, ':email' => $email, ':password' => $password];
 		query($pdo, $query, $parameters);
-}
+	}
 }
