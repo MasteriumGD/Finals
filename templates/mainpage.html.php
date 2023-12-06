@@ -1,5 +1,5 @@
 <div class="form">
-    <?php include 'addpost.php'?>
+    <?php include 'upload.php'?>
 
     <div class="formCenter">
         <div class="dropDown">

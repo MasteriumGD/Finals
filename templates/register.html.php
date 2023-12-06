@@ -6,7 +6,7 @@
                 <input type="text" id="username" name="username" placeholder="Username">
                 <input type="text" id="email" name="email" placeholder="Email">
                 <input type="password" id="password" name="password" placeholder="Password">
-                <input type="submit" name="register" value="Register">
+                <input type="submit" name="login" value="Log In">
             </form>
         </div>
     </div>

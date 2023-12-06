@@ -6,6 +6,6 @@
         <input type="file" id="fileToUpload" name="fileToUpload"><br>
         <label for="class">Class: </label>
         <?php include'dropdown.html.php'?><br>
-        <input type="submit" name="addpost" value="Post"><br>
+        <input type="submit" name="submit" value="Post"><br>
     </form>
 </div>
