@@ -5,9 +5,17 @@ if(isset($_POST["login"]) and !empty($_POST['email']) and !empty($_POST['passwor
     foreach($users as $user):
         if($_POST['email']!=$user['email']):
             $repeater = 0;
+        else:
+            $repeater = 1;
+            $id = $user['id'];
+            $username = $user['username'];
+            break;
         endif;
         if($_POST['password']!=$user['password']):
             $repeater = 0;
+        else:
+            $repeater = 1;
+            break;
         endif;
     endforeach;
 }else{

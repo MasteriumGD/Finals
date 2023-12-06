@@ -32,7 +32,7 @@ h1 {font-size:20px;
     display:flex;
     width:100%
 }
-.formLeft, .formRight, blockquote {
+.formLeft, .formRight, .formLogin, .formRegister, blockquote {
     padding: 20px;
     border-radius:20px;
     border-color:gray;
@@ -62,8 +62,8 @@ h1 {font-size:20px;
 .postDetails {
     margin-bottom:20px;
 }
-textarea, input[type=text], input[type=submit], input[type=file], select {
-    margin-bottom:20px;
+textarea, input[type=text], input[type=password], input[type=submit], input[type=file], select {
+    margin-top:20px;
     border-radius:20px;
     border-width:5px;
     height:40px;
@@ -76,13 +76,11 @@ textarea {
     resize:none;
     vertical-align: middle;
 }
-.formCenter textarea, .formCenter input[type=file] {
+.formCenter textarea {
     margin:0px; 
     height:43px;
-    width:49%
 }
 input[type=submit] {
-    margin-bottom:20px;
     background-color:#0051ff;
     color:white;
     border-width:0;

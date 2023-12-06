@@ -1,2 +1,2 @@
-<h2>Wish version of Quora</h2>
-<p>Welcome to the Wish version of Quora</p>
+<h2>Welcome</h2><br>
+<p>Ask and answer questions of your fellow students</p>

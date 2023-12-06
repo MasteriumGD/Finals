@@ -8,6 +8,5 @@
 
     <?php $postid = htmlspecialchars($fpost['id'], ENT_QUOTES, 'UTF-8')?><br>
     <textarea id="<?=$postid?>" name="content" cols="50" rows="5" placeholder="Comment"></textarea>
-    <input type="file" id="img" name="img" accept="image/*">
-    <br></br><input type="Submit" value="Reply">
+    <br><input type="Submit" value="Reply">
 </blockquote><br>

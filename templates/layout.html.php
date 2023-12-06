@@ -7,38 +7,18 @@
     </head>
     <body>
         <header>
-            <div class="headerLeft"><h1>Wish version of Quora</h1></div>
-            <div class="headerRight"><h1><a href="login.php">Login</a></h1></div>
+            <div class="headerLeft"><h1><a href="index.php">Wish version of Quora</a></h1></div>
+            <div class="headerRight"><h1><?php
+                                        if(!isset($id) or $id==""){
+                                            include 'templates/registerlogin.html.php';
+                                        }else{
+                                            include 'templates/username.html.php';
+                                        }?>
+                                    </h1></div>
         </header>
 
         <main>
-            <div class="form">
-                <?php include 'addpost.html.php'?>
-
-                <div class="formCenter">
-                    <div class="dropDown">
-                        <form action="" method="post">
-                            <label for="class">Specify which class to look at:</label>
-                            <?php include 'dropdown.html.php'?>
-                            <input type="submit" name="submit" value="Submit"/>
-                        </form>
-                    </div>
-
-                    <div class="formPost">
-                        <form action="/comment.php">
-                            <div class="postDetails">
-                                <?php include 'post.php'?>
-                                <?=$output?>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-
-                <div class="formRight">
-                    <h2>Welcome</h2><br>
-                    Ask and answer questions of your fellow students
-                </div>
-            </div>
+            <?=$mainpage?>
         </main>
 
         <footer>&copy; WVoQ 2023</footer>
